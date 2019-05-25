@@ -20,10 +20,10 @@ class PalindromeUtilsTest {
 
     @Test
     void getPolindromeFromCollectionTest() {
-        String[] params1 = new String[]{ "asd", "00100", "abccba", "127849sad", "f0f", "а роза упала на лапу Азора", "а роза упала на лапу азора" };
-        String[] excpected11 = new String[]{ "00100", "abccba", "f0f"};
-        String[] excpected12 = new String[]{ "00100", "abccba", "f0f", "а роза упала на лапу азора"};
-        String[] excpected13 = new String[]{ "00100", "abccba", "f0f", "а роза упала на лапу Азора", "а роза упала на лапу азора"};
+        String[] params1 = new String[]{ "asd", "22322", "а роза упала на лапу азора", "abccba", "127849ASD", "f0f", "а роза упала на лапу Азора" };
+        String[] excpected11 = new String[]{ "22322", "abccba", "f0f"};
+        String[] excpected12 = new String[]{ "22322", "abccba", "f0f", "а роза упала на лапу азора"};
+        String[] excpected13 = new String[]{ "22322", "а роза упала на лапу азора", "abccba", "f0f", "а роза упала на лапу Азора"};
 
         String[] params2 = new String[]{ "kek", "asjdkas", "lol", "Lol", "Sum summus mus" };
         String[] excpected21 = new String[]{ "kek", "lol"};
@@ -51,16 +51,16 @@ class PalindromeUtilsTest {
 
     @Test
     void getPolindromeFromStreamTest() {
-        String[] params1 = new String[]{ "asd", "00100", "abccba", "127849sad", "f0f", "а роза упала на лапу Азора", "а роза упала на лапу азора" };
-        String[] excpected11 = new String[]{ "00100", "abccba", "f0f"};
-        String[] excpected12 = new String[]{ "00100", "abccba", "f0f", "а роза упала на лапу азора"};
-        String[] excpected13 = new String[]{ "00100", "abccba", "f0f", "а роза упала на лапу Азора", "а роза упала на лапу азора"};
+        String[] params1 = new String[]{ "asd", "22322","а роза упала на лапу Азора", "abccba", "127849ASD", "f0f", "а роза упала на лапу азора" };
+        String[] excpected11 = new String[]{ "22322", "abccba", "f0f"};
+        String[] excpected12 = new String[]{ "22322", "abccba", "f0f", "а роза упала на лапу азора"};
+        String[] excpected13 = new String[]{ "22322", "а роза упала на лапу азора", "abccba", "f0f", "а роза упала на лапу Азора"};
 
         String[] params2 = new String[]{ "kek", "asjdkas", "lol", "Lol", "Sum summus mus" };
         String[] excpected21 = new String[]{ "kek", "lol"};
         String[] excpected22 = new String[]{ "kek", "lol", "Lol", "Sum summus mus"};
 
-        String[] params3 = new String[]{ "11111", "sfa893", "hello", "Saippuakivikauppias", "saippuakivikauppias" };
+        String[] params3 = new String[]{ "11111", "POSTAV`TE 3 POJALUISTA", "hello", "Saippuakivikauppias", "saippuakivikauppias" };
         String[] excpected31 = new String[]{ "11111", "saippuakivikauppias"};
         String[] excpected32 = new String[]{ "11111", "Saippuakivikauppias", "saippuakivikauppias", };
 
@@ -82,7 +82,7 @@ class PalindromeUtilsTest {
 
     @Test
     void isPalindromeTest() {
-        String[] params = new String[]{ "kek", "asjdkas", "lol", "Lol", "Sum summus mus", "а роза упала на лапу Азора" };
+        String[] params = new String[]{ "kek", "а роза упала на лапу Азора", "asjdkas", "lol", "Lol", "Sum summus mus" };
 
         assertEquals(true, PalindromeUtils.isPalindrome(params[0], true, true));
 
