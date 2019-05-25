@@ -9,7 +9,7 @@ import java.util.*;
 import java.util.stream.*;
 /**
  *
- * @author Andrey
+ * 
  */
 public class Lab8Palindrom {
 
